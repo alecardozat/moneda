@@ -1,0 +1,115 @@
+.app{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 15% 85%;
+    grid-template-areas: 
+    "aside header"
+    "aside main";
+    font-family: sans-serif;
+}
+
+button{
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+aside{
+    height: 100vh;
+    padding: 0.5rem;
+    padding-top: 6rem;
+    grid-area: aside;
+    border-right: 1px solid #ddd;
+}
+
+aside ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: start;
+    list-style: none;
+}
+
+aside ul li{
+    border-radius: 0.3rem;
+    background-color: #ddd;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+aside li a{
+    outline: none;
+    padding: 0.3rem 0.8rem;
+    display: block;
+}
+
+aside ul li:hover{
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+header{
+    grid-area: header;
+    padding: 1rem;
+}
+
+main{
+    grid-area: main;
+    background-color: #ddd;
+    padding: 1rem;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.card{
+    height: 5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    box-shadow: 1px 1px 6px rgba(0 0 0 /0.5);
+
+    span{
+        display: block;
+    }
+}
+
+table{
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 0.4rem;
+    box-shadow: 1px 1px 6px rgba(0 0 0 /0.5);
+}
+
+td, th{
+    padding: 0.4rem;
+}
+
+th{
+    padding-top: 1rem;
+}
+
+tr{
+    border-bottom: 1px solid rgb(204, 203, 203);
+    transition: background 0.15s ease;
+}
+
+tbody tr:nth-child(even){
+    background-color: rgb(233, 231, 231);
+}
+
+tbody tr:hover{
+    background-color: rgb(204, 203, 203);
+}
